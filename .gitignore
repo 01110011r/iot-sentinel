@@ -1,0 +1,21 @@
+# Compiled binaries
+iot_program
+*.exe
+*.out
+
+# CMake build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+compile_commands.json
+
+# Object and dependency files
+*.o
+*.obj
+*.d
+
+# Editor backup files
+*~
+\#*\#
