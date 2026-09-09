@@ -85,6 +85,10 @@ static void read_line(const char *prompt, char *buffer, size_t size)
 
     printf("%s", prompt);
     if (fgets(buffer, (int)size, stdin) == NULL) {
+        if (feof(stdin)) {
+            printf("\n");
+            exit(0);
+        }
         buffer[0] = '\0';
         return;
     }
