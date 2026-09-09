@@ -1,6 +1,6 @@
 # IoT Network Security Monitor
 
-A C++ console prototype for monitoring IoT devices and responding to basic network-security events. It simulates an IoT security controller that maintains a device inventory, receives telemetry, detects policy violations, and lets an operator isolate suspicious devices.
+A C11 console prototype for monitoring IoT devices and responding to basic network-security events. It simulates an IoT security controller that maintains a device inventory, receives telemetry, detects policy violations, and lets an operator isolate suspicious devices.
 
 ## Features
 
@@ -23,15 +23,15 @@ A C++ console prototype for monitoring IoT devices and responding to basic netwo
 
 ## Requirements
 
-- A C++14-compatible compiler, such as GCC or Clang
+- A C11-compatible compiler, such as GCC or Clang
 - CMake is optional
 
 ## Build and run
 
-Using `g++`:
+Using a C compiler:
 
 ```bash
-g++ -std=c++14 -Wall -Wextra -pedantic main.cpp -o iot_program
+cc -std=c11 -Wall -Wextra -pedantic main.c -o iot_program
 ./iot_program
 ```
 
@@ -62,7 +62,7 @@ To trigger alerts, select **Ingest telemetry** and submit a traffic value above 
 
 ## Current scope
 
-This is an educational, in-memory simulation. A production system would additionally need authenticated APIs, encrypted telemetry transport (for example, MQTT over TLS), persistent storage, role-based access control, audit logging, and integrations with real IoT gateways and SIEM tools.
+This is an educational, in-memory simulation implemented in C. A production system would additionally need authenticated APIs, encrypted telemetry transport (for example, MQTT over TLS), persistent storage, role-based access control, audit logging, and integrations with real IoT gateways and SIEM tools.
 
 ## License
 
