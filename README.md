@@ -31,8 +31,8 @@ A C11 console prototype for monitoring IoT devices and responding to basic netwo
 Using a C compiler:
 
 ```bash
-cc -std=c11 -Wall -Wextra -pedantic main.c -o iot_program
-./iot_program
+cc -std=c11 -Wall -Wextra -pedantic main.c -o iot-sentinel
+./iot-sentinel
 ```
 
 Using CMake:
